@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhavish B - Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #141E30, #243B55);
+      color: #f1f5f9;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(270deg, #38bdf8, #6366f1, #ec4899);
+      background-size: 600% 600%;
+      animation: gradientShift 12s ease infinite;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #fff;
+      font-weight: 500;
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background: #fff;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffedd5;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Sections */
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      font-family: 'Playfair Display', serif;
+      color: #38bdf8;
+      position: relative;
+    }
+
+    section h2::after {
+      content: "";
+      width: 90px;
+      height: 4px;
+      background: #ec4899;
+      display: block;
+      margin: 15px auto 0;
+      border-radius: 2px;
+    }
+
+    /* About */
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .about-container img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+      border: 4px solid #38bdf8;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .about-container img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.8);
+    }
+
+    .about-container p {
+      flex: 1;
+      min-width: 280px;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      text-align: justify;
+      color: #f9fafb;
+    }
+
+    /* Cards */
+    .skills, .tools, .projects, .education, .achievements {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card, .education-item, .achievement-item {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 15px;
+      padding: 25px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .card:hover, .education-item:hover, .achievement-item:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #38bdf8;
+    }
+
+    /* Contact */
+    #contact p {
+      font-size: 1.2rem;
+      background: rgba(255,255,255,0.1);
+      padding: 15px 20px;
+      display: inline-block;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    #contact strong {
+      color: #fbbf24;
+    }
+
+    /* Footer */
+    footer {
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 20px;
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    /* Animations */
+    @keyframes gradientShift {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Bhavish B</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#tools">Tools</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <img src="profile.jpg" alt="Bhavish B">
+      <p>
+        I am a Computer Science Engineering student passionate about technology, problem-solving, and innovation.  
+        With a deep curiosity for software development and AI, I strive to create impactful solutions that merge creativity with logic.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card">C</div>
+      <div class="card">C++</div>
+      <div class="card">Java</div>
+      <div class="card">Python</div>
+      <div class="card">HTML & CSS</div>
+      <div class="card">JavaScript</div>
+    </div>
+  </section>
+
+  <!-- Tools -->
+  <section id="tools">
+    <h2>Tools</h2>
+    <div class="tools">
+      <div class="card">Git & GitHub</div>
+      <div class="card">Node.js</div>
+      <div class="card">Canva</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Sudoku Puzzle Solver & Generator</h3>
+        <p>Built an efficient project that generates Sudoku puzzles and solves them with algorithms.</p>
+      </div>
+      <div class="card">
+        <h3>AI vs Real Image Detector</h3>
+        <p>A machine learning model to differentiate between AI-generated and real-world images.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education">
+      <div class="education-item">
+        <h3>B.E. in Computer Science</h3>
+        <p>Sahyadri College of Engineering and Management, Mangalore</p>
+        <p>CGPA: 8.24</p>
+      </div>
+      <div class="education-item">
+        <h3>Pre-University</h3>
+        <p>Sharada PU College, Mangalore</p>
+        <p>Percentage: 74%</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <div class="achievements">
+      <div class="achievement-item">500+ Yakshagana Performances</div>
+      <div class="achievement-item">State-level Quiz Player</div>
+      <div class="achievement-item">Aralu Mallige State Award Winner</div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>You can reach me at: <strong>bhavishbgowda020202@gmail.com</strong></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Bhavish B. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
