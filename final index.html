@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhavish B - Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- fullPage.js CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      color: white;
+      overflow: hidden;
+    }
+
+    /* Navbar */
+    #menu {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 100;
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      background: rgba(0,0,0,0.4);
+      padding: 10px 20px;
+      border-radius: 30px;
+    }
+
+    #menu li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    #menu li a:hover {
+      color: #ffcc00;
+    }
+
+    /* Sections */
+    .section {
+      text-align: center;
+      padding: 50px;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .hero img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #ffcc00;
+    }
+
+    p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 8px 0;
+      font-size: 1.1rem;
+    }
+
+    /* Backgrounds */
+    #about { background: linear-gradient(135deg, #1f1c2c, #928dab); }
+    #skills { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); }
+    #tools { background: linear-gradient(135deg, #42275a, #734b6d); }
+    #projects { background: linear-gradient(135deg, #283048, #859398); }
+    #education { background: linear-gradient(135deg, #355c7d, #6c5b7b, #c06c84); }
+    #achievements { background: linear-gradient(135deg, #1d2b64, #f8cdda); }
+    #resume { background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); }
+    #contact { background: linear-gradient(135deg, #000428, #004e92); }
+
+    /* Resume Button */
+    .resume-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #ffcc00;
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+
+    .resume-btn:hover {
+      background: #ffd633;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <ul id="menu">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <!-- fullPage container -->
+  <div id="fullpage">
+    <div class="section">
+      <div class="slide hero" id="about">
+        <img src="profile.jpg" alt="Bhavish Photo">
+        <h1>Bhavish B</h1>
+        <p>I am a Computer Science Engineering student passionate about technology, problem-solving, and innovation. With a deep curiosity for software development and AI, I strive to create impactful solutions that merge creativity with logic.</p>
+      </div>
+
+      <div class="slide" id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>Python</li>
+          <li>Java</li>
+          <li>C Language</li>
+          <li>HTML, CSS, JavaScript</li>
+        </ul>
+      </div>
+
+      <div class="slide" id="tools">
+        <h2>Tools</h2>
+        <ul>
+          <li>Git & GitHub</li>
+          <li>VS Code</li>
+          <li>PyCharm</li>
+          <li>IntelliJ IDEA</li>
+        </ul>
+      </div>
+
+      <div class="slide" id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li>Sudoku Puzzle Solver & Generator</li>
+          <li>AI vs Real Image Detector</li>
+        </ul>
+      </div>
+
+      <div class="slide" id="education">
+        <h2>Education</h2>
+        <p><strong>Bachelor of Engineering - CSE</strong><br>
+        Sahyadri College of Engineering and Management, Mangalore<br>
+        CGPA: 8.24</p>
+        <p><strong>Pre-University</strong><br>
+        Sharada PU College, Mangalore<br>
+        Percentage: 74%</p>
+      </div>
+
+      <div class="slide" id="achievements">
+        <h2>Achievements</h2>
+        <ul>
+          <li>500+ Yakshagana performances</li>
+          <li>State Level Quiz Player</li>
+          <li>Aralu Mallige State Award Winner</li>
+        </ul>
+      </div>
+
+      <!-- Resume Slide -->
+      <div class="slide" id="resume">
+        <h2>Resume</h2>
+        <p>You can view my complete resume here:</p>
+        <a href="resume.pdf" target="_blank" class="resume-btn">View Resume</a>
+      </div>
+
+      <div class="slide" id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:bhavishbgowda020202@gmail.com" style="color:#ffcc00;">bhavishbgowda020202@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/bhavishbgowda" target="_blank" style="color:#ffcc00;">github.com/bhavishbgowda</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- fullPage.js Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
+  <script>
+    new fullpage('#fullpage', {
+      autoScrolling:true,
+      navigation:true,
+      controlArrows:true,
+      slidesNavigation:true,
+      anchors:['about','skills','tools','projects','education','achievements','resume','contact'],
+      menu:'#menu',
+      loopHorizontal: false
+    });
+  </script>
+
+</body>
+</html>
